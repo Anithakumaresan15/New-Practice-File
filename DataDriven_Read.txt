@@ -1,0 +1,29 @@
+DataDRiven_Read
+
+Package_name
+ClassName {
+public static void to_Read_Data throws Throwable {
+File fis = new File ("Location"); 
+FileInputStream input = new FileInputStream(fis);
+Workbook work = new XSSFWorkbook(input);
+Sheet s = work.getSheetAt(0);
+Row r = s.getRow(0);
+Cell c = r.getCell(1);
+CellType cT = c.getCellTYpe();
+if(cT.equals(cT.NUMERIC)){
+double numbericCellValue = c.getNumericCellValue();
+Syetem.out.println(numericCellValue);
+}
+elseif(cT.equals(cT.STRING)){
+String stringCellValue = c.getStringCellValue();
+System.out.println(stringCellValue);
+}
+}
+
+public static void main(String [] args) throws Throwable{
+       to_Read_Data();
+}
+
+}
+ 
+
